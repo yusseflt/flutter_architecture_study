@@ -3,7 +3,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokemon_details_model.dart';
 import 'package:testing_ddd/core/err/failure.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokemon_species_model.dart';
-import 'package:testing_ddd/features/pokedex/repository/http_pokemon_details_repository.dart';
+import 'package:testing_ddd/features/pokedex/infrastructure/repositories/http_pokemon_details_repository.dart';
 
 class PokemonDetailsBloc {
   late PublishSubject pokemonDetailsSubject;

@@ -1,7 +1,7 @@
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:rxdart/subjects.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokedex_model.dart';
-import 'package:testing_ddd/features/pokedex/repository/http_pokedex_repository.dart';
+import 'package:testing_ddd/features/pokedex/infrastructure/repositories/http_pokedex_repository.dart';
 
 class PokedexBloc {
   late PublishSubject pokedexSubject;

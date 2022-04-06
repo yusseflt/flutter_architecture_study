@@ -10,4 +10,6 @@ class Constants {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viiI/icons/";
   static const String POKEMON_HOME_SPRITE_URL =
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/";
+
+  static const String CACHE_POKEDEX_DATA = "pokedexData";
 }

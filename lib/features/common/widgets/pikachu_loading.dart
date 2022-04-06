@@ -51,7 +51,8 @@ class _PikachuLoadingState extends State<PikachuLoading> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image(
-          image: PreLoader.loadingGif,
+          image: PreLoader.loadingGif ??
+              const AssetImage("assets/gif/pikachu_loading.gif"),
           width: 100,
         ),
         const SizedBox(height: 4),

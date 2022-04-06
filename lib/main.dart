@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testing_ddd/core/util/pre_loader.dart';
-import 'package:testing_ddd/features/pokedex/application/pokedex_main.dart';
+import 'package:testing_ddd/core/application/application_manager.dart';
+import 'package:testing_ddd/features/common/pages/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,15 +14,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // init preloader
-    PreLoader();
+    ApplicationManager(applicationNavigator: globalNavigatorKey);
     return MaterialApp(
       navigatorKey: globalNavigatorKey,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Pokedex(parentNavigator: globalNavigatorKey),
+      home: SplashScreen(),
     );
   }
 }

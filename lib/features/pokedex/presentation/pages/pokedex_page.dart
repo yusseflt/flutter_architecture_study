@@ -35,6 +35,7 @@ class _PokedexPageState extends State<PokedexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF090F0B),
       body: PagedGridView<int, PokedexPokemonModel>(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,

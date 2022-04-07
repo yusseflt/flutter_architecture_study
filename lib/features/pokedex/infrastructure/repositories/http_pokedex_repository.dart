@@ -11,8 +11,8 @@ abstract class PokedexRepository {
 }
 
 class HttpPokedexRepository implements PokedexRepository {
-  final PokedexRemoteDataSource pokedexRemoteDataSource;
-  final PokedexLocalDataSource pokedexLocalDataSource;
+  final PokedexRemoteDataSourceInterface pokedexRemoteDataSource;
+  final PokedexLocalDataSourceInterface pokedexLocalDataSource;
   final NetworkInfo networkInfo;
 
   HttpPokedexRepository({
@@ -30,7 +30,7 @@ class HttpPokedexRepository implements PokedexRepository {
             await pokedexRemoteDataSource.getPokedexList(nextUrl: nextUrl);
 
         PokedexModel pokedexModel = PokedexModel.fromJson(json);
-        pokedexLocalDataSource.cachePokedexData(pokedexModel);
+        sendPokedexModelToCache(pokedexModel);
         return Right(pokedexModel);
       } catch (e) {
         return Left(PokedexFailure());
@@ -44,5 +44,11 @@ class HttpPokedexRepository implements PokedexRepository {
         return Left(PokedexFailure());
       }
     }
+  }
+
+  void sendPokedexModelToCache(PokedexModel pokedexModel) {
+    try {
+      pokedexLocalDataSource.cachePokedexData(pokedexModel);
+    } catch (e) {}
   }
 }

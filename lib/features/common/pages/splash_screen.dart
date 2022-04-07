@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:testing_ddd/core/application/application_manager.dart';
 import 'package:testing_ddd/core/util/pre_loader.dart';
 import 'package:testing_ddd/features/common/widgets/pikachu_loading.dart';
-import 'package:testing_ddd/features/pokedex/application/pokedex_main.dart';
+import 'package:testing_ddd/features/pokedex/pokedex_main.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

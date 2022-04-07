@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:testing_ddd/core/util/network_info.dart';
-import 'package:testing_ddd/features/pokedex/domain/err/pokedex_failure.dart';
+import 'package:testing_ddd/features/pokedex/domain/failure/pokedex_failure.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokedex_model.dart';
 import 'package:testing_ddd/features/pokedex/infrastructure/datasources/pokedex_local_data_source.dart';
 import 'package:testing_ddd/features/pokedex/infrastructure/datasources/pokedex_remote_data_source.dart';

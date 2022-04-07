@@ -1,4 +1,4 @@
-import 'package:testing_ddd/core/err/failure.dart';
+import 'package:testing_ddd/core/failure/failure.dart';
 
 class PokedexFailure extends Failure {
   @override

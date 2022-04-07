@@ -1,19 +1,15 @@
-import 'package:equatable/equatable.dart';
+import 'package:testing_ddd/features/pokedex/domain/entities/ability.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/species.dart';
 
 // ignore: must_be_immutable
-class Ability extends Equatable {
-  Ability({
-    this.ability,
-    this.isHidden,
-    this.slot,
-  });
+class AbilityModel extends Ability {
+  AbilityModel({
+    Species? ability,
+    bool? isHidden,
+    int? slot,
+  }) : super(ability: ability, isHidden: isHidden, slot: slot);
 
-  Species? ability;
-  bool? isHidden;
-  int? slot;
-
-  factory Ability.fromJson(Map<String, dynamic> json) => Ability(
+  factory AbilityModel.fromJson(Map<String, dynamic> json) => AbilityModel(
         ability:
             json["ability"] == null ? null : Species.fromJson(json["ability"]),
         isHidden: json["is_hidden"],
@@ -25,7 +21,4 @@ class Ability extends Equatable {
         "is_hidden": isHidden,
         "slot": slot,
       };
-
-  @override
-  List<Object?> get props => [ability, isHidden, slot];
 }

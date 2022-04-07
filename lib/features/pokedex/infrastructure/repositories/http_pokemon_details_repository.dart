@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:testing_ddd/core/err/failure.dart';
+import 'package:testing_ddd/core/failure/failure.dart';
 import 'package:http/http.dart' as http;
 import 'package:testing_ddd/core/util/constants.dart';
-import 'package:testing_ddd/features/pokedex/domain/err/pokemon_details_failure.dart';
+import 'package:testing_ddd/features/pokedex/domain/failure/pokemon_details_failure.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/evolution_chain_model.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokemon_details_model.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokemon_species_model.dart';

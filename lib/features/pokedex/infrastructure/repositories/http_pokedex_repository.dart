@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:testing_ddd/core/err/failure.dart';
+import 'package:testing_ddd/core/failure/failure.dart';
 import 'package:testing_ddd/core/util/network_info.dart';
-import 'package:testing_ddd/features/pokedex/domain/err/pokedex_failure.dart';
+import 'package:testing_ddd/features/pokedex/domain/failure/pokedex_failure.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/pokedex_model.dart';
 import 'package:testing_ddd/features/pokedex/infrastructure/datasources/pokedex_local_data_source.dart';
 import 'package:testing_ddd/features/pokedex/infrastructure/datasources/pokedex_remote_data_source.dart';

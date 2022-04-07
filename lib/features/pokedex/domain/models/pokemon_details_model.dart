@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:testing_ddd/features/pokedex/domain/models/ability.dart';
+import 'package:testing_ddd/features/pokedex/domain/entities/ability.dart';
+import 'package:testing_ddd/features/pokedex/domain/models/ability_model.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/game_index.dart';
 import 'package:testing_ddd/features/pokedex/domain/models/move.dart';
 import 'dart:convert';
@@ -61,7 +62,7 @@ class PokemonDetailsModel extends Equatable {
         abilities: json["abilities"] == null
             ? null
             : List<Ability>.from(
-                json["abilities"].map((x) => Ability.fromJson(x))),
+                json["abilities"].map((x) => AbilityModel.fromJson(x))),
         baseExperience: json["base_experience"],
         forms: json["forms"] == null
             ? null
@@ -100,8 +101,8 @@ class PokemonDetailsModel extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
-        "abilities":
-            List<dynamic>.from(abilities?.map((x) => x.toJson()) ?? []),
+        "abilities": List<dynamic>.from(
+            abilities?.map((x) => (x as AbilityModel).toJson()) ?? []),
         "base_experience": baseExperience,
         "forms": List<dynamic>.from(forms?.map((x) => x.toJson()) ?? []),
         "game_indices":
